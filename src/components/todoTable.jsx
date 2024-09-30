@@ -2,6 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import { styled, useTheme } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
+import TextField from "@mui/material/TextField";
 
 function TodoTable() {
   const Item = styled(Paper)(({ theme }) => ({
@@ -38,6 +39,7 @@ function TodoTable() {
                 height: "100%",
                 margin: "0",
                 padding: "0",
+                position: "relative",
               }}
             >
               <img
@@ -46,6 +48,20 @@ function TodoTable() {
                   objectFit: "cover",
                   height: "100%",
                   width: "100%",
+                }}
+              />
+              <TextField
+                id="filled-basic"
+                label="Filled"
+                variant="filled"
+                sx={{
+                  bottom: "0",
+                  position: "absolute",
+                  margin: " 10px",
+                  left: "10px",
+                  backgroundColor: "rgba(51, 51, 51, 0.544);",
+                  width: "90%",
+                  color: "white",
                 }}
               />
             </Item>

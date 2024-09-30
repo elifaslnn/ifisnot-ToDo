@@ -148,7 +148,7 @@ function Sidebar() {
                           justifyContent: "initial",
                         }
                       : {
-                          justifyContent: "center",
+                          display: "none",
                         },
                   ]}
                 >
@@ -190,7 +190,11 @@ function Sidebar() {
             id="filled-basic"
             label="Filled"
             variant="filled"
-            sx={{ bottom: "0", position: "absolute", margin: " 10px" }}
+            sx={[
+              open
+                ? { bottom: "0", position: "absolute", margin: " 10px" }
+                : { display: "none" },
+            ]}
           />
         </Drawer>
       </Grid>
